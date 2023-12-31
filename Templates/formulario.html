@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+
+    <title>Registro de Frequência</title>
+</head>
+<body>
+    <h1>Sistema de Frequencia SENAC 4.0</h1>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <br>
+    <img src="../static/senac.png">
+    <br>
+    <form action="/frequencia" method="post">
+        <h2> Registre sua Frequencia</h2>
+        <label for="matricula">Matrícula:</label>
+        <input type="text" id="matricula" name="matricula"><br><br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha"><br><br>
+        <label for="curso">Curso:</label>
+        <select id="curso" name="curso">
+            <option value="Programador de Sistemas">Programador de Sistemas</option>
+            <option value="Adm.Banco de Dados">Adm.Banco de Dados</option>
+            <option value="Programador Web">Programador Web</option>
+        </select><br><br>
+        <input type="submit" value="Registrar Frequência">
+    </form>
+    
+</body>
+</html>
